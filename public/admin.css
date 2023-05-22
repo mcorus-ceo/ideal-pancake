@@ -1,0 +1,31 @@
+
+select, .btn, input {
+    background: black;
+    color:white;
+    padding:2px;
+}
+.btn:hover {
+    background-color: rgba(106, 142, 35, 0.24);
+    outline-color: rgba(106, 142, 35, 0.24);
+}
+body {
+    position: absolute;
+    top:0;
+    left:20vw;
+}
+    /* .invisinput {
+        background: none;
+        outline: none;
+    } */
+.quizQuestionQuestions, .newQuestion {
+    margin-top: 10px;
+}
+.newQuestion {
+    
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding-bottom:3px;
+}
+label {
+    font-size: 0.9em;
+}

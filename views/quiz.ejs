@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="public/quiz.css">
+    <link rel="stylesheet" href="public/common.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <script src="public/rw.js"></script>
+    <div class="uinfo_container cf">
+        <img class="icon" src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=<%= name%>">
+        <h3 class="uname"><%= name%></h3>
+    </div>
+    <div class="container cf">
+        <div class="question">
+            <h1>
+                <%= question%>
+            </h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="answers-container">
+            <% answers.forEach(answer => { %>
+                <div class="answer" onclick="submitAns(JSON.parse(`<%= JSON.stringify(answer)%>`))">
+                    <h2><%= answer.text%></h2>
+                </div>
+                
+            <% }) %>
+        </div>
+    </div>
+    <script src="public/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="public/admin.css">
+    <link rel="stylesheet" href="public/common.css">
+    <title>Admin panel</title>
+</head>
+<body>
+    <script src="public/rw.js"></script>
+    <select id="current_quiz">
+    </select>
+    <div id="key">
+        <label for="quizCode">Code: </label>
+        <input name="quizCode" type="text" placeholder="Loading..." class="quizInput">
+        <button onclick="generateQuizCode()" class="btn">New</button>
+        <button onclick="saveQuizCode()" class="btn">Save</button>
+    </div>
+    <button id="newQuizBtn" class="btn">New Quiz</button>
+    <div id="newQuizOptions" style="display:none;position:absolute;bottom:-1000px;left:-1000px">
+        <input type="text" placeholder="Quiz Name" value="Quiz Name" name="quizname" id="newQuizName" class="quizInput">
+        <div id="newQuizQuestions">
+            <button id="addNewQuizQuestion" class="btn">Add new question</button>
+            <div class="newQuestion">
+                <input class="invisinput quizInput quizQuestionQuestion" placeholder="New  Question" value="New Question">
+                
+                <div class="quizQuestionQuestions">
+                    <div class="quizQuestionQuestionsAnswer">
+                        <input type="text" class="invisinput quizQuestionName quizInput" placeholder="New Answer" value="New Answer">
+                    
+                        <br>
+                        
+                        <label for="correctAnswer">Correct Answer</label>
+                        <input type="checkbox" name="correctAnswer" class="quizQuestionCorrect quizInput">
+                    </div>
+                </div>
+                <button class="addAnswer btn" data-index="0" onclick="newAnswer(0)">Add new Answer</button>
+            </div>
+        </div>
+        <button id="addQuizBtn" class="btn">Add</button>
+    </div>
+    <script src="public/admin.js"></script>
+</body>
+</html>

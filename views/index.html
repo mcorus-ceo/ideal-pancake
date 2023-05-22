@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz Main Page</title>
+    <link rel="stylesheet" href="public/home.css">
+    <link rel="stylesheet" href="public/common.css">
+</head>
+<body>
+    <nav>
+        <header>
+            <h3 class="navbar">
+                <span id="jQuizBtn" class="navbarEl">
+                    Join a Quiz
+                </span>
+                <span id="loginBtn" class="navbarEl">
+                    Login
+                </span>
+            </h3>
+        </header>
+    </nav>
+    <script src="/public/home.js"></script>
+    <div id="loginModal" style="display:none">
+        <input type="text" placeholder="Username" class="userpass" name="username" id="loginModalUsername">
+        <br>
+        <input type="password" placeholder="Password" class="userpass" name="password" id="loginModalPassword">
+        <br>
+        <button class="darkmodeBtn" id="loginModalSubmitBtn">Login</button>
+        <p id="loginModalError">&nbsp;</p>
+    </div>
+    <div id="joinModal" style="display:none">
+        <input type="text" placeholder="Name" class="userpass" name="name" id="joinModalName">
+        <br>
+        <input type="password" placeholder="Key" class="userpass" name="key" id="joinModalKey">
+        <br>
+        <button class="darkmodeBtn" id="joinModalSubmitBtn">Join</button>
+        <p id="joinModalError">&nbsp;</p>
+    </div>
+</body>
+</html>

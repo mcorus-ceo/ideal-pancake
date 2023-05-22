@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="public/quiz.css">
+    <link rel="stylesheet" href="public/score.css">
+    <script src="public/score.js"></script>
+    <link rel="stylesheet" href="public/common.css">
+    <title>Scoreboard</title>
+</head>
+<body>
+    <script src="public/rw.js"></script>
+    <div class="uinfo_container cf">
+        <img class="icon" src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=<%= name%>">
+        <h3 class="uname"><%= name%></h3>
+    </div>
+    <div class="board" style="--var-each: calc((90vw / <%= board.MaxWidth%>) - 13px)">
+        <% board.Users.forEach(user => { %>
+            <div class="line">
+                <h3 class="lineutxt"><%= user.name%></h3>
+                <% user.empty_array.forEach(x => { %>
+                    <div class="square filled"></div>
+                <% }) %>
+                <% user.wrong_array.forEach(y => { %>
+                    <div class="square"></div>
+                <% }) %>
+            </div>
+            
+        <% }) %>
+    </div>
+    <!-- <%= JSON.stringify(board)%> -->
+    <script src="public/quiz.js"></script>
+</body>
+</html>

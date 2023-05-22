@@ -1,0 +1,47 @@
+nav {
+    text-align: center;
+}
+.navbarEl:not(:last-child)::after {
+    content: "|";
+    color:darkgray
+}
+.navbarEl:hover {
+    cursor: pointer;
+    color:rgb(251, 172, 251);
+}
+#loginModal, #joinModal {
+    position: absolute;
+    top: var(--login-top);
+    left: calc(var(--login-left) - 60px);
+    padding:10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #00000033;
+    text-align: center;
+}
+.userpass {
+    background-color: rgb(83, 83, 83);
+    color:white;
+}
+.userpass::placeholder {
+    opacity: 1;
+    color:lightgray;
+}
+.userpass[highlight]::placeholder {
+    color:lightcoral;
+    opacity: 1;
+}
+.darkmodeBtn {
+    color:white;
+    background-color: black;
+    border-radius: 10%;
+    cursor:pointer;
+}
+.darkmodeBtn:hover {
+    background-color: rgb(50,50,50);
+    color:rgb(251, 172, 251);
+}
+#loginModalError, #joinModalError {
+    margin: 0;
+    color:lightcoral;
+}

@@ -1,0 +1,43 @@
+.board {
+    max-width: 90vw;
+    /* display: flex; */
+    
+    position: absolute;
+    top: 150px;
+    left: calc(5vw + (13px / 2))
+}
+.line .square {
+    display: inline-block;
+    height:100px;
+    width: var(--var-each);
+    margin:0px;
+    padding: 0px;
+    outline:none;
+    border:none;
+    --self-radius:25px;
+}
+.line .square.filled {
+    background-color:greenyellow;
+}
+.line .square:not(.filled) {
+    background-color:ghostwhite;
+}
+.firstBorder {
+    border-top-left-radius: var(--self-radius);
+    border-bottom-left-radius: var(--self-radius);
+    /* outline:1px solid lime; */
+}
+.lastBorder {
+    border-top-right-radius: var(--self-radius);
+    border-bottom-right-radius: var(--self-radius);
+    outline:1px solid lime;
+}
+.line {
+    border-radius:10px;
+    text-align: center;
+}
+.lineutxt {
+    margin: 0 0 5px 0;
+    
+    text-align: left;
+}
